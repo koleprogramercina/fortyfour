@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FortyFour Pilates · Reformer Pilates · Sremska Mitrovica i Ruma</title>
+<meta name="description" content="Reformer Pilates u Sremskoj Mitrovici i Rumi. Kontrolisan trening na reformeru, uz pažnju instruktora i program prilagođen vašem nivou. Zakažite prvi trening.">
+<meta name="theme-color" content="#24080C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* =====================================================================
+   FortyFour Pilates — boje preuzete iz zvanične aplikacije (Forty Four)
+   ===================================================================== */
+:root{
+  --night:#24080C;      /* najtamnija pozadina (hero, futer) */
+  --wine:#3A0D13;       /* tamna sekcija */
+  --burgundy:#6A0610;   /* primarna boja brenda (znak) */
+  --burgundy-2:#84252D; /* kartice u aplikaciji */
+  --rose-deep:#9F5452;
+  --rose:#B26562;
+  --blush:#DCA09D;      /* pozadina ikone */
+  --blush-2:#EBC9C6;
+  --shell:#F8EEEC;      /* svetla sekcija */
+  --paper:#FDF8F6;      /* najsvetlija */
+  --ink:#2A0A0E;
+  --ink-2:#6B4447;
+  --line:rgba(42,10,14,.12);
+  --line-dark:rgba(248,238,236,.14);
+  --head:'Inter Tight', system-ui, sans-serif;
+  --body:'Manrope', system-ui, sans-serif;
+  --mark:'Montserrat', system-ui, sans-serif;
+  --pad:clamp(20px,5vw,72px);
+  --max:1320px;
+  --r:24px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;line-height:1.6;font-size:16px;overflow-x:hidden}
+img,svg,iframe{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--blush);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.sec{padding:clamp(80px,11vw,150px) 0}
+.label{display:inline-flex;align-items:center;gap:10px;font:700 12px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--burgundy)}
+.label::before{content:"";width:22px;height:2px;background:currentColor;border-radius:2px}
+h2{font-family:var(--head);font-weight:700;font-size:clamp(34px,4.6vw,64px);line-height:1.02;letter-spacing:-.03em}
+h3{font-family:var(--head);font-weight:700;letter-spacing:-.02em}
+
+/* oznaka za podatke koje treba dopuniti pre objave */
+.todo{display:inline;background:repeating-linear-gradient(-45deg,rgba(220,160,157,.28) 0 6px,rgba(220,160,157,.12) 6px 12px);border:1px dashed var(--rose);border-radius:6px;padding:1px 7px;font-weight:600;color:inherit;font-size:.92em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.on-dark .todo{border-color:var(--blush);background:rgba(220,160,157,.12)}
+
+/* placeholder fotografija (dok ne stignu slike iz Higgsfield-a) */
+.ph{position:relative;overflow:hidden;background:
+   radial-gradient(110% 80% at 80% 10%,rgba(255,244,242,.75) 0%,rgba(255,244,242,0) 55%),
+   radial-gradient(80% 70% at 10% 100%,rgba(106,6,16,.35) 0%,rgba(106,6,16,0) 60%),
+   linear-gradient(155deg,#EBC9C6 0%,#D7A4A0 48%,#B97A76 100%)}
+.ph::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(100deg,transparent 0 80px,rgba(255,255,255,.16) 80px 82px)}
+.ph span{position:absolute;left:14px;top:14px;z-index:2;font:700 10.5px/1.4 var(--body);letter-spacing:.08em;text-transform:uppercase;background:rgba(253,248,246,.9);color:var(--burgundy);padding:7px 10px;border-radius:7px;max-width:calc(100% - 28px)}
+
+/* ---------- dugmad ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;font:800 15px/1 var(--body);border-radius:999px;transition:background .25s var(--ease),color .25s var(--ease),transform .25s var(--ease),box-shadow .25s var(--ease);white-space:nowrap}
+.btn-primary{background:var(--burgundy);color:#fff;padding:17px 28px}
+.btn-primary:hover{background:var(--burgundy-2);transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(106,6,16,.7)}
+.btn-pill{background:var(--shell);color:var(--ink);padding:9px 9px 9px 28px;font-size:16px;gap:18px}
+.btn-pill .ic{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--burgundy);color:#fff;transition:transform .35s var(--ease),background .25s}
+.btn-pill:hover{background:#fff;box-shadow:0 18px 40px -18px rgba(0,0,0,.6)}
+.btn-pill:hover .ic{transform:rotate(-45deg);background:var(--burgundy-2)}
+.btn-ghost{border:1.5px solid currentColor;padding:15px 24px}
+.btn-ghost:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.arrow{transition:transform .25s var(--ease)}
+a:hover .arrow,button:hover .arrow{transform:translateX(4px)}
+.link{font-weight:700;border-bottom:1.5px solid currentColor;padding-bottom:2px;transition:color .2s,border-color .2s}
+.link:hover{color:var(--burgundy)}
+
+/* ---------- logo ---------- */
+.logo{display:flex;align-items:center;gap:12px}
+.logo svg{width:26px;height:auto;fill:currentColor;flex:none}
+.logo .wm{display:flex;flex-direction:column;line-height:1}
+.logo .wm b{font:600 17px/1 var(--mark);letter-spacing:.08em}
+.logo .wm small{font:500 8.5px/1 var(--mark);letter-spacing:.42em;margin-top:5px;opacity:.75}
+
+/* =====================================================================
+   NAVIGACIJA
+   ===================================================================== */
+.nav{position:fixed;inset:0 0 auto;z-index:50;color:var(--shell);transition:background .35s var(--ease),box-shadow .35s,padding .35s}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;transition:height .35s var(--ease)}
+.nav.scrolled{background:rgba(36,8,12,.86);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);box-shadow:0 1px 0 var(--line-dark)}
+.nav.scrolled .wrap{height:66px}
+.nav .logo svg{color:var(--blush)}
+.nav ul{display:flex;gap:4px;list-style:none}
+.nav ul a{display:block;font:600 14px/1 var(--body);padding:11px 14px;border-radius:999px;opacity:.82;transition:opacity .2s,background .2s}
+.nav ul a:hover{opacity:1;background:rgba(248,238,236,.09)}
+.nav .btn-primary{padding:13px 22px;font-size:14px;background:var(--blush);color:var(--ink)}
+.nav .btn-primary:hover{background:var(--shell);color:var(--ink);box-shadow:0 10px 26px -12px rgba(220,160,157,.7)}
+.burger{display:none;width:46px;height:46px;border-radius:50%;place-items:center;border:1px solid var(--line-dark)}
+.burger i{display:block;width:18px;height:1.5px;background:currentColor;position:relative;transition:transform .3s,background .3s}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;width:18px;height:1.5px;background:currentColor;transition:transform .3s}
+.burger i::before{top:-6px}.burger i::after{top:6px}
+.menu-open .burger i{background:transparent}
+.menu-open .burger i::before{transform:translateY(6px) rotate(45deg)}
+.menu-open .burger i::after{transform:translateY(-6px) rotate(-45deg)}
+.mmenu{position:fixed;inset:0;z-index:45;background:var(--night);color:var(--shell);padding:110px var(--pad) 40px;display:flex;flex-direction:column;gap:6px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.mmenu a.ml{font:700 34px/1.15 var(--head);letter-spacing:-.02em;padding:8px 0;border-bottom:1px solid var(--line-dark);display:flex;justify-content:space-between;align-items:center}
+.mmenu a.ml:hover{color:var(--blush)}
+.mmenu .btn{margin-top:auto}
+.menu-open .mmenu{opacity:1;visibility:visible}
+
+/* =====================================================================
+   HERO — pravac B
+   ===================================================================== */
+.hero{background:var(--night);color:var(--shell);position:relative;overflow:hidden;padding-top:78px}
+.hero::after{content:"";position:absolute;width:60vw;height:60vw;right:-20vw;top:-25vw;border-radius:50%;background:radial-gradient(closest-side,rgba(132,37,45,.45),transparent);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.25fr .85fr;gap:clamp(32px,5vw,80px);align-items:center;min-height:calc(100svh - 78px);max-height:980px;padding-top:clamp(36px,5vw,64px);padding-bottom:clamp(56px,7vw,96px);position:relative;z-index:1}
+.chip{display:inline-flex;align-items:center;gap:10px;font:700 13px/1 var(--body);padding:10px 16px 10px 12px;border-radius:999px;background:rgba(248,238,236,.07);border:1px solid var(--line-dark)}
+.chip::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--blush);box-shadow:0 0 0 4px rgba(220,160,157,.22)}
+.hero h1{font-family:var(--head);font-weight:700;font-size:clamp(44px,6.4vw,96px);line-height:.95;letter-spacing:-.04em;margin:30px 0 28px}
+.hero h1 .hl{color:var(--blush)}
+.hero .sub{font-size:clamp(17px,1.4vw,20px);line-height:1.6;max-width:40ch;color:rgba(248,238,236,.78)}
+.hero-cta{display:flex;align-items:center;gap:24px;margin-top:40px;flex-wrap:wrap}
+.fine{display:flex;align-items:center;gap:10px;font-size:13.5px;color:rgba(248,238,236,.7);line-height:1.45}
+.fine::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--blush);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(220,160,157,.55)}70%{box-shadow:0 0 0 9px rgba(220,160,157,0)}100%{box-shadow:0 0 0 0 rgba(220,160,157,0)}}
+.via{margin-top:22px;font-size:13px;font-weight:600;letter-spacing:.02em;color:rgba(248,238,236,.55)}
+.hero-vis{position:relative;justify-self:end;width:100%;max-width:470px}
+.hero-vis .block{position:absolute;right:-14%;top:-9%;width:78%;height:72%;background:var(--burgundy);border-radius:30px}
+.hero-vis .ph{position:relative;z-index:1;aspect-ratio:4/5;border-radius:30px;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.hero-vis .vert{position:absolute;left:-48px;bottom:14px;writing-mode:vertical-rl;transform:rotate(180deg);font:600 11px var(--mark);letter-spacing:.44em;text-transform:uppercase;color:rgba(248,238,236,.4)}
+.hero-vis .badge{position:absolute;z-index:2;left:-28px;bottom:36px;background:var(--shell);color:var(--ink);border-radius:18px;padding:14px 18px;display:flex;align-items:center;gap:12px;box-shadow:0 20px 40px -20px rgba(0,0,0,.6);font:700 13px/1.3 var(--body)}
+.hero-vis .badge svg{width:18px;fill:var(--burgundy)}
+
+/* =====================================================================
+   PREDNOSTI — horizontalna numerisana lista
+   ===================================================================== */
+.perks{background:var(--shell)}
+.perks-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:clamp(48px,6vw,80px)}
+.perks-head h2{max-width:15ch;margin-top:20px}
+.perks-head p{max-width:36ch;color:var(--ink-2)}
+.perk-row{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);border-top:1.5px solid var(--ink)}
+.perk-row li{padding:28px 28px 8px 0;position:relative}
+.perk-row li+li{padding-left:28px;border-left:1px solid var(--line)}
+.perk-row .n{font:700 13px/1 var(--head);color:var(--burgundy);letter-spacing:.06em}
+.perk-row h3{font-size:22px;line-height:1.15;margin:26px 0 12px}
+.perk-row p{color:var(--ink-2);font-size:15px}
+
+/* =====================================================================
+   KOME JE NAMENJEN — sticky fotografija
+   ===================================================================== */
+.who{background:var(--paper)}
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,110px);align-items:start}
+.who-photo{position:sticky;top:100px}
+.who-photo .ph{aspect-ratio:4/4.6;border-radius:var(--r)}
+.who h2{margin:20px 0 22px;max-width:13ch}
+.who .lead{font-size:18px;color:var(--ink-2);max-width:44ch}
+.who-list{list-style:none;margin:48px 0 40px}
+.who-list li{padding:30px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:52px 1fr;gap:6px 0}
+.who-list li:last-child{border-bottom:1px solid var(--line)}
+.who-list .dot{width:34px;height:34px;border-radius:50%;background:var(--blush-2);display:grid;place-items:center;color:var(--burgundy);font:800 14px var(--head)}
+.who-list h3{font-size:22px;line-height:1.2}
+.who-list p{grid-column:2;color:var(--ink-2)}
+.note{font-size:14px;color:var(--ink-2);background:var(--shell);border-radius:14px;padding:16px 18px;margin-bottom:32px;line-height:1.55}
+
+/* =====================================================================
+   TRENINZI — velika vertikalna lista
+   ===================================================================== */
+.programs{background:var(--wine);color:var(--shell)}
+.programs .label{color:var(--blush)}
+.programs-head{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:56px}
+.programs-head p{max-width:38ch;color:rgba(248,238,236,.7)}
+.prog{border-top:1px solid var(--line-dark)}
+.prog:last-child{border-bottom:1px solid var(--line-dark)}
+.prog-row{display:grid;grid-template-columns:70px 1.3fr 1fr 1fr 56px;gap:28px;align-items:center;padding:34px 0;transition:padding .35s var(--ease)}
+.prog-row .i{font:700 14px var(--head);color:var(--blush);opacity:.8}
+.prog-row h3{font-size:clamp(28px,3.4vw,48px);line-height:1;letter-spacing:-.035em;transition:color .3s}
+.prog-row .d{color:rgba(248,238,236,.74);font-size:15.5px}
+.prog-row .for{font-size:14px;color:rgba(248,238,236,.74)}
+.prog-row .for b{display:block;font:700 11px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--blush);margin-bottom:8px}
+.prog-row .go{width:52px;height:52px;border-radius:50%;border:1px solid var(--line-dark);display:grid;place-items:center;transition:background .3s,border-color .3s,transform .35s var(--ease)}
+.prog:hover .prog-row{padding:44px 0}
+.prog:hover h3{color:var(--blush)}
+.prog:hover .go{background:var(--blush);border-color:var(--blush);color:var(--ink);transform:rotate(-45deg)}
+
+/* =====================================================================
+   PRVI DOLAZAK — timeline
+   ===================================================================== */
+.first{background:var(--blush);position:relative;overflow:hidden}
+.first .label{color:var(--burgundy)}
+.first-head{text-align:left;max-width:640px;margin-bottom:clamp(56px,7vw,90px)}
+.first-head h2{margin-top:20px}
+.tl{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;position:relative}
+.tl::before{content:"";position:absolute;left:0;right:0;top:27px;height:2px;background:linear-gradient(90deg,var(--burgundy) 0%,var(--burgundy) var(--prog,0%),rgba(106,6,16,.2) var(--prog,0%))}
+.tl li{position:relative}
+.tl .node{width:56px;height:56px;border-radius:50%;background:var(--burgundy);color:#fff;display:grid;place-items:center;font:700 18px var(--head);position:relative;z-index:1;box-shadow:0 0 0 8px var(--blush)}
+.tl h3{font-size:26px;line-height:1.15;margin:30px 0 12px}
+.tl p{color:var(--ink);opacity:.82;max-width:32ch}
+.first-cta{margin-top:64px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+
+/* =====================================================================
+   INSTRUKTORI — preklopna kompozicija
+   ===================================================================== */
+.team{background:var(--paper);overflow:hidden}
+.team-stage{position:relative;display:grid;grid-template-columns:repeat(12,1fr);align-items:end;min-height:880px}
+.team-photo{padding-top:40px;align-self:start;margin-top:150px}
+.team-photo{grid-column:6 / 11;grid-row:1}
+.team-photo .ph{aspect-ratio:4/5;border-radius:var(--r)}
+.team-type{grid-column:1 / 9;grid-row:1;align-self:start;position:relative;z-index:2;padding-top:20px;pointer-events:none}
+.team-type h2{font-size:clamp(48px,8.4vw,128px);line-height:.9;letter-spacing:-.05em;color:var(--burgundy);mix-blend-mode:multiply}
+.team-card{grid-column:1 / 6;grid-row:1;position:relative;z-index:3;background:var(--shell);border-radius:var(--r);padding:28px;margin-bottom:0;max-width:460px;box-shadow:0 30px 60px -40px rgba(42,10,14,.5)}
+.team-card .role{font:700 11px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--rose-deep)}
+.team-card h3{font-size:30px;margin:12px 0 14px;line-height:1.1}
+.team-card p{color:var(--ink-2);font-size:15px}
+.team-card dl{margin-top:20px;display:grid;gap:10px;font-size:14px}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:var(--paper);padding:5px;border-radius:16px;margin-bottom:26px}
+.tab{display:flex;flex-direction:column;align-items:flex-start;gap:3px;padding:10px 12px;border-radius:12px;font:700 13px/1.2 var(--body);color:var(--ink-2);text-align:left;transition:background .25s,color .25s}
+.tab .tn{font:700 11px/1 var(--head);color:var(--rose-deep);transition:color .25s}
+.tab:hover{background:var(--blush-2);color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--burgundy);color:#fff}
+.tab[aria-selected="true"] .tn{color:var(--blush)}
+.tpanel{animation:tfade .45s var(--ease)}
+@keyframes tfade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.tnav{display:flex;justify-content:space-between;align-items:center;margin-top:24px;padding-top:18px;border-top:1px solid var(--line)}
+.tnav .count{font:600 13px var(--head);color:var(--ink-2)}.tnav .count b{color:var(--burgundy)}
+.tbtns{display:flex;gap:8px}
+.tstep{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:background .25s,color .25s,border-color .25s}
+.tstep:hover{background:var(--burgundy);border-color:var(--burgundy);color:#fff}
+.team-card dt{font-weight:700;color:var(--ink)}
+.team-card dd{color:var(--ink-2);margin-bottom:6px}
+
+/* =====================================================================
+   STUDIO — full-bleed fotografija + uložen kadar
+   ===================================================================== */
+.studio{background:var(--night);color:var(--shell);position:relative}
+.studio-hero{position:relative;height:min(86vh,820px);min-height:520px}
+.studio-hero .ph{position:absolute;inset:0}
+.studio-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(36,8,12,0) 45%,rgba(36,8,12,.85) 100%);pointer-events:none}
+.studio-title{position:absolute;z-index:2;left:0;right:0;bottom:clamp(36px,5vw,64px)}
+.studio-title .wrap{display:flex;flex-direction:column;align-items:flex-end;text-align:right}
+.studio-title .label{flex-direction:row-reverse}
+.studio-title h2{font-size:clamp(48px,8vw,124px);line-height:.9;letter-spacing:-.05em}
+.studio-title .label{color:var(--blush);margin-bottom:22px}
+.studio-band{position:relative}
+.studio-band .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px);padding-top:clamp(56px,7vw,96px);padding-bottom:clamp(80px,10vw,130px)}
+.studio-inset{margin-top:clamp(-260px,-18vw,-140px);position:relative;z-index:3}
+.studio-inset .ph{aspect-ratio:4/3;border-radius:var(--r);box-shadow:0 40px 80px -30px rgba(0,0,0,.7);border:6px solid var(--night)}
+.studio-text p{color:rgba(248,238,236,.78);font-size:17.5px;max-width:46ch}
+.studio-text p+p{margin-top:18px}
+.studio-text .facts{margin-top:34px;display:flex;gap:10px;flex-wrap:wrap}
+.studio-text .facts span{font:600 13px/1 var(--body);padding:11px 16px;border-radius:999px;border:1px solid var(--line-dark)}
+
+/* =====================================================================
+   ISKUSTVA — centrirani blok
+   ===================================================================== */
+.reviews{background:var(--burgundy);color:var(--shell);text-align:center}
+.reviews .label{color:var(--blush)}
+.reviews .q{font:800 140px/0.6 var(--head);color:var(--blush);opacity:.5;height:60px;margin:30px auto 10px}
+.reviews h2{max-width:16ch;margin:0 auto}
+.reviews .slot{max-width:640px;margin:36px auto 0;font-size:17px;line-height:1.7;color:rgba(248,238,236,.86)}
+
+/* =====================================================================
+   CENOVNIK — mreža kartica
+   ===================================================================== */
+.pricing{background:var(--shell)}
+.pricing-head{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:56px}
+.pricing-head h2{margin-top:20px}
+.pricing-head p{max-width:40ch;color:var(--ink-2)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--paper);border-radius:var(--r);padding:34px 30px;display:flex;flex-direction:column;gap:18px;border:1px solid var(--line);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -40px rgba(42,10,14,.55)}
+.card .tag{align-self:flex-start;font:700 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;padding:8px 12px;border-radius:999px;background:var(--blush-2);color:var(--burgundy)}
+.card h3{font-size:26px;line-height:1.1}
+.card .price{font:700 44px/1 var(--head);letter-spacing:-.03em}
+.card ul{list-style:none;display:grid;gap:10px;font-size:15px;color:var(--ink-2);padding-top:18px;border-top:1px solid var(--line);margin-bottom:8px}
+.card ul li{display:flex;gap:10px}
+.card ul li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--rose);margin-top:9px}
+.card .btn{margin-top:auto}
+.card.feat{background:var(--burgundy);color:var(--shell);border-color:var(--burgundy)}
+.card.feat .tag{background:var(--blush);color:var(--ink)}
+.card.feat ul{color:rgba(248,238,236,.8);border-color:var(--line-dark)}
+.card.feat ul li::before{background:var(--blush)}
+.card.feat .btn-primary{background:var(--shell);color:var(--ink)}
+.card.feat .btn-primary:hover{background:#fff}
+.card.feat .todo{border-color:var(--blush);background:rgba(220,160,157,.15)}
+
+/* =====================================================================
+   FAQ — accordion
+   ===================================================================== */
+.faq{background:var(--paper)}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(40px,7vw,110px);align-items:start}
+.faq-grid h2{margin-top:20px}
+.faq-grid .aside p{color:var(--ink-2);margin:22px 0 30px;max-width:34ch}
+.acc{border-top:1.5px solid var(--ink)}
+.acc-item{border-bottom:1px solid var(--line)}
+.acc-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;text-align:left;padding:26px 0;font:700 clamp(18px,1.6vw,21px)/1.3 var(--head);letter-spacing:-.01em;transition:color .2s}
+.acc-q:hover{color:var(--burgundy)}
+.acc-q .pm{flex:none;width:40px;height:40px;border-radius:50%;background:var(--shell);position:relative;transition:background .3s,transform .35s var(--ease)}
+.acc-q .pm::before,.acc-q .pm::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:2px;background:var(--burgundy);transform:translate(-50%,-50%);transition:transform .35s var(--ease),background .3s}
+.acc-q .pm::after{transform:translate(-50%,-50%) rotate(90deg)}
+.acc-q:hover .pm{background:var(--blush-2)}
+.acc-item.open .pm{background:var(--burgundy);transform:rotate(180deg)}
+.acc-item.open .pm::before,.acc-item.open .pm::after{background:#fff}
+.acc-item.open .pm::after{transform:translate(-50%,-50%) rotate(0)}
+.acc-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--ease)}
+.acc-a>div{overflow:hidden}
+.acc-a p{padding:0 56px 28px 0;color:var(--ink-2);font-size:16px}
+.acc-item.open .acc-a{grid-template-rows:1fr}
+
+/* =====================================================================
+   LOKACIJA — mapa sa info-panelom
+   ===================================================================== */
+.loc{background:var(--shell)}
+.loc .label{margin-bottom:20px}
+.map-box{position:relative;border-radius:calc(var(--r) + 6px);overflow:hidden;min-height:600px;margin-top:44px;background:var(--blush-2)}
+.map-box{min-height:700px}
+.maps{position:absolute;inset:0;display:grid;grid-template-rows:1fr 1fr;gap:3px;background:var(--shell)}
+.map{position:relative;overflow:hidden;background:var(--blush-2)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.75) contrast(1.02)}
+.map-tag{position:absolute;right:16px;top:16px;z-index:2;font:700 12px/1 var(--body);letter-spacing:.06em;background:var(--night);color:var(--shell);padding:10px 14px;border-radius:999px;pointer-events:none}
+.places{display:grid;gap:10px}
+.place{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:14px;padding:16px;border-radius:16px;background:rgba(248,238,236,.06);border:1px solid var(--line-dark);transition:background .25s,border-color .25s}
+.place:hover{background:rgba(220,160,157,.14);border-color:rgba(220,160,157,.45)}
+.place .pin{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--blush);color:var(--ink);font:800 12px var(--head)}
+.place b{display:block;font:700 16px/1.2 var(--head);color:#fff;margin-bottom:3px}
+.place span:nth-child(2){font-size:14.5px;color:rgba(248,238,236,.8)}
+.place .arrow{color:var(--blush)}
+.place:hover .arrow{transform:translate(3px,-3px)}
+.loc-panel{position:absolute;z-index:2;left:28px;top:28px;bottom:28px;width:min(410px,calc(100% - 56px));background:var(--night);color:var(--shell);border-radius:var(--r);padding:34px;display:flex;flex-direction:column;gap:22px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.loc-panel .logo svg{color:var(--blush)}
+.loc-panel dl{display:grid;gap:18px}
+.loc-panel dt{font:700 11px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--blush);margin-bottom:6px}
+.loc-panel dd{font-size:15.5px;color:rgba(248,238,236,.88)}
+.loc-panel .btn{margin-top:auto}
+.loc-panel .btn-primary{background:var(--blush);color:var(--ink)}
+.loc-panel .btn-primary:hover{background:var(--shell)}
+
+/* =====================================================================
+   ZAVRŠNI POZIV — tipografski poster
+   ===================================================================== */
+.final{background:var(--burgundy);color:var(--shell);position:relative;overflow:hidden}
+.final .big-mark{position:absolute;right:-6vw;bottom:-18vw;width:min(62vw,820px);fill:rgba(220,160,157,.13);pointer-events:none}
+.final .wrap{position:relative;z-index:1}
+.final h2{font-size:clamp(52px,8.4vw,132px);line-height:.92;letter-spacing:-.05em;max-width:10ch}
+.final h2 span{color:var(--blush)}
+.final-row{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-top:clamp(40px,5vw,64px);flex-wrap:wrap}
+.final-row p{font-size:19px;max-width:30ch;color:rgba(248,238,236,.85)}
+.stores{display:flex;gap:12px;flex-wrap:wrap}
+.store{display:flex;align-items:center;gap:14px;background:var(--night);color:var(--shell);border-radius:16px;padding:18px 26px 18px 20px;min-width:230px;transition:background .25s,transform .25s var(--ease)}
+.store:hover{background:#000;transform:translateY(-3px)}
+.store svg{width:26px;height:26px;fill:currentColor;flex:none}
+.store small{display:block;font:600 11px/1 var(--body);opacity:.7;margin-bottom:5px}
+.store b{display:block;font:700 18px/1 var(--head);letter-spacing:-.01em}
+.final .hint{margin-top:22px;font-size:13.5px;color:rgba(248,238,236,.7)}
+
+/* =====================================================================
+   FUTER
+   ===================================================================== */
+.foot{background:var(--night);color:rgba(248,238,236,.8);padding:72px 0 40px;font-size:15px}
+.foot .logo{color:var(--shell)}
+.foot .logo svg{color:var(--blush)}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px;border-bottom:1px solid var(--line-dark)}
+.foot h4{font:700 11px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--blush);margin-bottom:14px}
+.foot a{transition:color .2s}.foot a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:28px;font-size:13px;color:rgba(248,238,236,.55);flex-wrap:wrap}
+.foot-bottom a:hover{color:var(--blush)}
+
+/* ---------- mobilni fiksirani CTA ---------- */
+.mbar{display:none}
+
+/* ---------- animacije pri skrolovanju ---------- */
+[data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+[data-reveal].in{opacity:1;transform:none}
+[data-reveal="fade"]{transform:none}
+[data-reveal="scale"]{transform:scale(.96)}
+[data-d="1"]{transition-delay:.08s}[data-d="2"]{transition-delay:.16s}[data-d="3"]{transition-delay:.24s}[data-d="4"]{transition-delay:.32s}
+.hero [data-reveal]{transition-duration:1s}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  [data-reveal]{opacity:1;transform:none;transition:none}
+  .fine::before{animation:none}
+}
+
+/* =====================================================================
+   RESPONSIVE
+   ===================================================================== */
+@media (max-width:1080px){
+  .nav ul{display:none}
+  .burger{display:grid}
+  .nav .btn-primary{display:none}
+  .prog-row{grid-template-columns:50px 1fr 1fr 52px}
+  .prog-row .for{grid-column:2 / 4}
+  .prog-row .go{grid-row:1;grid-column:4}
+  .perk-row{grid-template-columns:repeat(2,1fr)}
+  .perk-row li:nth-child(3){padding-left:0;border-left:0}
+  .perk-row li:nth-child(n+3){border-top:1px solid var(--line);margin-top:18px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  body{font-size:15.5px}
+  .sec{padding:76px 0}
+  .nav .wrap{height:66px}
+  .hero{padding-top:66px}
+  .hero-grid{grid-template-columns:1fr;min-height:0;max-height:none;padding-top:28px;padding-bottom:48px;gap:40px}
+  .hero h1{font-size:clamp(42px,12.4vw,60px);margin:22px 0 18px}
+  .hero .sub{font-size:16.5px}
+  .hero-cta{flex-direction:column;align-items:stretch;gap:16px;margin-top:28px}
+  .hero-cta .btn-pill{justify-content:space-between}
+  .hero-vis{justify-self:stretch;max-width:none;margin-right:6px}
+  .hero-vis .ph{aspect-ratio:4/3.6;border-radius:24px}
+  .hero-vis .block{right:-26px;top:-16px;width:62%;height:70%;border-radius:24px}
+  .hero-vis .vert{display:none}
+  .hero-vis .badge{left:14px;bottom:-18px;font-size:12.5px;padding:12px 14px}
+  .perks-head,.programs-head,.pricing-head{flex-direction:column;align-items:flex-start;gap:16px}
+  .perk-row{grid-template-columns:1fr}
+  .perk-row li,.perk-row li+li{padding:24px 0 20px;border-left:0;margin-top:0}
+  .perk-row li+li{border-top:1px solid var(--line)}
+  .perk-row li{display:grid;grid-template-columns:44px 1fr;gap:0 4px}
+  .perk-row .n{padding-top:6px}
+  .perk-row h3{margin:0 0 6px;font-size:20px}
+  .perk-row p{grid-column:2}
+  .who-grid{grid-template-columns:1fr;gap:36px}
+  .who-photo{position:relative;top:0}
+  .who-photo .ph{aspect-ratio:4/3}
+  .who-list{margin:32px 0 28px}
+  .who-list li{padding:22px 0;grid-template-columns:46px 1fr}
+  .who-list h3{font-size:19px}
+  .prog-row{grid-template-columns:1fr 52px;gap:12px 16px;padding:28px 0}
+  .prog-row .i{grid-column:1}
+  .prog-row h3{grid-column:1 / 3}
+  .prog-row .d,.prog-row .for{grid-column:1 / 3}
+  .prog-row .go{grid-row:1;grid-column:2;justify-self:end;width:46px;height:46px}
+  .prog:hover .prog-row{padding:28px 0}
+  .tl{grid-template-columns:1fr;gap:0;padding-left:0}
+  .tl::before{left:27px;right:auto;top:10px;bottom:10px;width:2px;height:auto;background:rgba(106,6,16,.25)}
+  .tl li{display:grid;grid-template-columns:56px 1fr;gap:0 20px;padding-bottom:36px}
+  .tl li:last-child{padding-bottom:0}
+  .tl h3{margin:12px 0 8px;font-size:22px}
+  .tl p{grid-column:2}
+  .first-cta{margin-top:44px;flex-direction:column;align-items:stretch}
+  .team-stage{display:block;min-height:0}
+  .team-type h2{font-size:clamp(46px,14vw,72px);position:relative;z-index:2;margin-bottom:24px}
+  .team-photo{padding-top:0;margin-top:0}
+  .tab{padding:11px 6px;font-size:12.5px;align-items:center;text-align:center;white-space:nowrap}
+  .tab .tn{display:none}
+  .chip{font-size:11.5px;padding:9px 12px 9px 10px;gap:8px}
+  .team-photo .ph{aspect-ratio:4/5;border-radius:20px}
+  .team-card{margin:-60px 14px 0;padding:26px 22px}
+  .studio-hero{height:72vh;min-height:440px}
+  .studio-title{bottom:120px}
+  .studio-title .wrap{align-items:flex-start;text-align:left}
+  .studio-title .label{flex-direction:row}
+  .via{margin-top:2px;padding-left:17px}
+  .studio-band .wrap{grid-template-columns:1fr;gap:36px}
+  .studio-inset{margin-top:-90px;margin-left:40px}
+  .studio-inset .ph{border-width:5px}
+  .reviews .q{font-size:110px;height:46px}
+  .cards{grid-template-columns:1fr;gap:16px}
+  .card.feat{order:-1}
+  .faq-grid{grid-template-columns:1fr;gap:28px}
+  .acc-a p{padding-right:0}
+  .acc-q{padding:22px 0}
+  .map-box{min-height:0;display:flex;flex-direction:column;background:var(--night);margin-top:32px}
+  .maps{position:relative;inset:auto;order:2;grid-template-rows:260px 260px}
+  .map-tag{right:12px;top:12px}
+  .loc-panel{position:relative;inset:auto;width:auto;border-radius:0;padding:28px 22px}
+  .final h2{font-size:clamp(46px,13.4vw,72px);line-height:.98}
+  .final-row{flex-direction:column;align-items:stretch}
+  .stores{flex-direction:column}
+  .store{min-width:0}
+  .final .big-mark{width:120vw;right:-40vw;bottom:-40vw}
+  .foot-grid{grid-template-columns:1fr;gap:30px}
+  .foot{padding-bottom:120px}
+  .mbar{display:flex;position:fixed;z-index:40;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));gap:10px;padding:8px;border-radius:999px;background:rgba(36,8,12,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 18px 40px -16px rgba(0,0,0,.6);transform:translateY(140%);transition:transform .45s var(--ease)}
+  .mbar.show{transform:none}
+  .mbar .btn{flex:1;padding:16px 18px;font-size:15px}
+  .mbar .btn-primary{background:var(--blush);color:var(--ink)}
+  .mbar .info{display:flex;flex-direction:column;justify-content:center;padding-left:14px;color:var(--shell);font-size:12px;line-height:1.3}
+  .mbar .info b{font-size:13px}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Znak brenda, rekonstruisan iz ikone aplikacije Forty Four -->
+    <symbol id="mark" viewBox="96 35 319 441">
+      <path d="M96 249 L306 35 L306 164 L96 378 Z"/>
+      <path d="M212.4 476 A172 172 0 0 1 415 273.4 L415 365.2 A84 84 0 0 0 304.2 476 Z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ================= NAVIGACIJA ================= -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="FortyFour Pilates — početak">
+      <svg viewBox="96 35 319 441"><use href="#mark"/></svg>
+      <span class="wm"><b>FORTY FOUR</b><small>PILATES</small></span>
+    </a>
+    <nav aria-label="Glavna navigacija">
+      <ul>
+        <li><a href="#treninzi">Treninzi</a></li>
+        <li><a href="#o-nama">O nama</a></li>
+        <li><a href="#cenovnik">Cenovnik</a></li>
+        <li><a href="#pitanja">Česta pitanja</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a href="#zakazi" class="btn btn-primary js-book">Zakaži trening</a>
+    <button class="burger" id="burger" aria-label="Otvori meni" aria-expanded="false"><i></i></button>
+  </div>
+</header>
+
+<div class="mmenu" id="mmenu" aria-hidden="true">
+  <a class="ml" href="#treninzi">Treninzi <span class="arrow">→</span></a>
+  <a class="ml" href="#o-nama">O nama <span class="arrow">→</span></a>
+  <a class="ml" href="#cenovnik">Cenovnik <span class="arrow">→</span></a>
+  <a class="ml" href="#pitanja">Česta pitanja <span class="arrow">→</span></a>
+  <a class="ml" href="#kontakt">Kontakt <span class="arrow">→</span></a>
+  <a href="#zakazi" class="btn btn-primary js-book">Zakaži trening <span class="arrow">→</span></a>
+</div>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero on-dark">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="chip" data-reveal>Reformer Pilates · Sremska Mitrovica · Ruma</span>
+      <h1 data-reveal data-d="1">Pilates koji <span class="hl">menja</span> način na koji se krećete</h1>
+      <p class="sub" data-reveal data-d="2">Kontrolisan trening na reformeru, uz pažnju instruktora i program prilagođen vašem nivou.</p>
+      <div class="hero-cta" data-reveal data-d="3">
+        <a href="#zakazi" class="btn btn-pill js-book">Zakaži prvi trening <span class="ic">→</span></a>
+        <span class="fine">Sremska Mitrovica i Ruma · Broj mesta po terminu je ograničen</span>
+      </div>
+      <p class="via" data-reveal data-d="4">Zakazivanje kroz FortyFour aplikaciju · App Store i Google Play</p>
+    </div>
+    <div class="hero-vis" data-reveal="scale" data-d="2">
+      <div class="block"></div>
+      <div class="ph" role="img" aria-label="Reformer pilates trening uz instruktorku"><span>Foto: hero · reformer studio, vežba uz instruktorku</span></div>
+      <div class="badge"><svg viewBox="96 35 319 441"><use href="#mark"/></svg>Termini se zakazuju<br>kroz aplikaciju</div>
+      <span class="vert">Reformer studio</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KLJUČNE PREDNOSTI ================= -->
+<section class="perks sec" id="o-nama">
+  <div class="wrap">
+    <div class="perks-head">
+      <div data-reveal>
+        <span class="label">Zašto FortyFour</span>
+        <h2>Trening u kom je svaki pokret promišljen</h2>
+      </div>
+      <p data-reveal data-d="1">Reformer pilates je spor, precizan i zahtevan, ali na dobar način. Evo na šta se kod nas obraća pažnja na svakom treningu.</p>
+    </div>
+    <ol class="perk-row">
+      <li data-reveal><span class="n">01</span><h3>Kontrolisan pokret</h3><p>Vežbe se izvode smireno i svesno, uz otpor opruga na reformeru.</p></li>
+      <li data-reveal data-d="1"><span class="n">02</span><h3>Pažnja instruktora</h3><p>Instruktor prati izvođenje i ispravlja tehniku tokom celog treninga.</p></li>
+      <li data-reveal data-d="2"><span class="n">03</span><h3>Pravilna tehnika</h3><p>Akcenat je na kvalitetu pokreta, a ne na broju ponavljanja.</p></li>
+      <li data-reveal data-d="3"><span class="n">04</span><h3>Ograničen broj mesta</h3><p>Termini se zakazuju unapred, a broj mesta po terminu je ograničen.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= KOME JE NAMENJEN ================= -->
+<section class="who sec">
+  <div class="wrap who-grid">
+    <div class="who-photo" data-reveal="fade">
+      <div class="ph" role="img" aria-label="Žena tokom reformer pilates treninga uz instruktorku"><span>Foto: trening · žena na reformeru, instruktorka pomaže</span></div>
+    </div>
+    <div>
+      <span class="label" data-reveal>Kome je namenjen</span>
+      <h2 data-reveal data-d="1">Trening koji se prilagođava vama</h2>
+      <p class="lead" data-reveal data-d="2">Reformer pilates se prilagođava nivou svakog vežbača, pa trening ima smisla i ako tek počinjete i ako već redovno trenirate.</p>
+      <ul class="who-list">
+        <li data-reveal><span class="dot">1</span><h3>Ako tek počinjete</h3><p>Prvi trening počinje upoznavanjem sa reformerom i osnovnim pokretima, uz instruktora pored vas.</p></li>
+        <li data-reveal><span class="dot">2</span><h3>Ako već trenirate</h3><p>Intenzitet i složenost vežbi prate vaše trenutno iskustvo i nivo.</p></li>
+        <li data-reveal><span class="dot">3</span><h3>Ako želite mirniji tempo</h3><p>Trening se fokusira na kontrolu, stabilnost i pokretljivost, bez naglih i grubih pokreta.</p></li>
+        <li data-reveal><span class="dot">4</span><h3>Ako volite manje grupe</h3><p>Broj mesta po terminu je ograničen, pa instruktor ima vremena za svakoga.</p></li>
+      </ul>
+      <p class="note" data-reveal>Pilates nije medicinski tretman. Ako imate povredu ili zdravstveno stanje, posavetujte se sa lekarom pre početka i obavestite instruktora.</p>
+      <a href="#zakazi" class="btn btn-primary js-book" data-reveal>Zakaži trening <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRENINZI ================= -->
+<section class="programs sec on-dark" id="treninzi">
+  <div class="wrap">
+    <div class="programs-head">
+      <div data-reveal><span class="label">Ponuda</span><h2 style="margin-top:20px">Treninzi</h2></div>
+      <p data-reveal data-d="1">Svi treninzi se izvode na reformeru, uz instruktora. Termine birate u aplikaciji. <span class="todo">Potvrditi listu treninga sa studijom</span></p>
+    </div>
+    <div class="prog" data-reveal>
+      <a href="#zakazi" class="prog-row js-book">
+        <span class="i">01</span>
+        <h3>Reformer</h3>
+        <p class="d">Trening na reformeru kroz kontrolisane vežbe, gde opruge daju otpor i podršku pokretu.</p>
+        <p class="for"><b>Kome je namenjen</b><span class="todo">Dopuniti: npr. svim nivoima</span></p>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+    </div>
+    <div class="prog" data-reveal data-d="1">
+      <a href="#zakazi" class="prog-row js-book">
+        <span class="i">02</span>
+        <h3>Reformer Low Intensity</h3>
+        <p class="d">Reformer trening nižeg intenziteta, mirnijeg tempa i sa više vremena za svaki pokret.</p>
+        <p class="for"><b>Kome je namenjen</b><span class="todo">Dopuniti: npr. početnicima i onima koji žele blaži tempo</span></p>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRVI DOLAZAK ================= -->
+<section class="first sec">
+  <div class="wrap">
+    <div class="first-head">
+      <span class="label" data-reveal>Prvi dolazak</span>
+      <h2 data-reveal data-d="1">Vaš prvi trening</h2>
+    </div>
+    <ol class="tl" id="tl">
+      <li data-reveal><span class="node">1</span><div><h3>Zakažete termin</h3><p>Kontaktirate studio i birate termin koji vam odgovara.</p></div></li>
+      <li data-reveal data-d="1"><span class="node">2</span><div><h3>Upoznajemo vas sa reformerom</h3><p>Instruktor vam pokazuje spravu, osnovne pokrete i pravilan način izvođenja vežbi.</p></div></li>
+      <li data-reveal data-d="2"><span class="node">3</span><div><h3>Počinjemo trening</h3><p>Trening se prilagođava vašem trenutnom nivou i iskustvu.</p></div></li>
+    </ol>
+    <div class="first-cta" data-reveal>
+      <a href="#zakazi" class="btn btn-primary js-book">Zakaži prvi trening <span class="arrow">→</span></a>
+      <span style="font-size:14px">Ponuda za prvi trening: <span class="todo">Dopuniti ako postoji</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INSTRUKTORI ================= -->
+<section class="team sec">
+  <div class="wrap">
+    <div class="team-stage">
+      <div class="team-type" data-reveal><span class="label" style="margin-bottom:18px">Tim</span><h2>Vaši<br>instruktori</h2></div>
+      <div class="team-photo" data-reveal="scale" data-d="1">
+        <div class="ph" role="img" aria-label="Portret instruktora"><span id="tphoto">Foto: instruktor 1 · portret 4:5</span></div>
+      </div>
+      <article class="team-card" data-reveal data-d="2">
+        <div class="tabs" role="tablist" aria-label="Instruktori"><button class="tab" role="tab" id="tb1" aria-controls="tp1" aria-selected="true"><span class="tn">01</span>Instruktor 1</button><button class="tab" role="tab" id="tb2" aria-controls="tp2" aria-selected="false"><span class="tn">02</span>Instruktor 2</button><button class="tab" role="tab" id="tb3" aria-controls="tp3" aria-selected="false"><span class="tn">03</span>Instruktor 3</button></div>
+        <div class="tpanel" id="tp1" role="tabpanel" aria-labelledby="tb1">
+          <span class="role"><span class="todo">Pozicija</span></span>
+          <h3><span class="todo">Ime i prezime · instruktor 1</span></h3>
+          <p><span class="todo">Kratak opis pristupa treningu (2–3 rečenice, prema podacima instruktora)</span></p>
+          <dl><dt>Iskustvo i sertifikati</dt><dd><span class="todo">Samo ako su dostavljeni, inače obrisati ovaj red</span></dd></dl>
+        </div>
+        <div class="tpanel" id="tp2" role="tabpanel" aria-labelledby="tb2" hidden>
+          <span class="role"><span class="todo">Pozicija</span></span>
+          <h3><span class="todo">Ime i prezime · instruktor 2</span></h3>
+          <p><span class="todo">Kratak opis pristupa treningu (2–3 rečenice, prema podacima instruktora)</span></p>
+          <dl><dt>Iskustvo i sertifikati</dt><dd><span class="todo">Samo ako su dostavljeni, inače obrisati ovaj red</span></dd></dl>
+        </div>
+        <div class="tpanel" id="tp3" role="tabpanel" aria-labelledby="tb3" hidden>
+          <span class="role"><span class="todo">Pozicija</span></span>
+          <h3><span class="todo">Ime i prezime · instruktor 3</span></h3>
+          <p><span class="todo">Kratak opis pristupa treningu (2–3 rečenice, prema podacima instruktora)</span></p>
+          <dl><dt>Iskustvo i sertifikati</dt><dd><span class="todo">Samo ako su dostavljeni, inače obrisati ovaj red</span></dd></dl>
+        </div>
+        <div class="tnav"><span class="count"><b id="tcur">01</b> / 03</span><span class="tbtns"><button class="tstep" data-step="-1" aria-label="Prethodni instruktor">←</button><button class="tstep" data-step="1" aria-label="Sledeći instruktor">→</button></span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STUDIO ================= -->
+<section class="studio on-dark">
+  <div class="studio-hero">
+    <div class="ph" role="img" aria-label="Svetao reformer pilates studio"><span>Foto: studio · široki kadar, bez ljudi</span></div>
+    <div class="studio-title"><div class="wrap"><span class="label" data-reveal>Prostor</span><h2 data-reveal data-d="1">FortyFour<br>studio</h2></div></div>
+  </div>
+  <div class="studio-band">
+    <div class="wrap">
+      <div class="studio-inset" data-reveal="scale">
+        <div class="ph" role="img" aria-label="Detalj reformer sprave"><span>Foto: reformer · detalj sprave</span></div>
+      </div>
+      <div class="studio-text" data-reveal data-d="1">
+        <p>FortyFour je reformer pilates studio sa dve lokacije, u Sremskoj Mitrovici i Rumi. Treninzi se izvode na reformerima, a termine i članarine pratite kroz aplikaciju studija.</p>
+        <p><span class="todo">Dopuniti: opis prostora, atmosfere i opreme (npr. broj reformera), samo stvarni podaci</span></p>
+        <div class="facts"><span>Sremska Mitrovica · Fruškogorska 21</span><span>Ruma · 15. maja 122b</span><span>Zakazivanje kroz aplikaciju</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ISKUSTVA ================= -->
+<section class="reviews sec on-dark">
+  <div class="wrap">
+    <span class="label" data-reveal>Iskustva članova</span>
+    <div class="q" aria-hidden="true" data-reveal>“</div>
+    <h2 data-reveal data-d="1">Šta kažu naši članovi</h2>
+    <p class="slot" data-reveal data-d="2"><span class="todo">Pre objave dostaviti stvarne recenzije (ime ili inicijali, izjava, izvor: npr. aplikacija ili Google profil). Bez stvarnih recenzija ova sekcija se ne objavljuje.</span></p>
+  </div>
+</section>
+
+<!-- ================= CENOVNIK ================= -->
+<section class="pricing sec" id="cenovnik">
+  <div class="wrap">
+    <div class="pricing-head">
+      <div data-reveal><span class="label">Paketi</span><h2>Cenovnik</h2></div>
+      <p data-reveal data-d="1">Članarinu i preostale treninge pratite u aplikaciji. <span class="todo">Uneti tačne pakete i cene studija</span></p>
+    </div>
+    <div class="cards">
+      <article class="card feat" data-reveal>
+        <span class="tag">Za početak</span>
+        <h3><span class="todo">Naziv paketa</span></h3>
+        <div class="price"><span class="todo">0.000 RSD</span></div>
+        <ul><li><span class="todo">Broj treninga</span></li><li><span class="todo">Rok važenja / uslovi</span></li></ul>
+        <a href="#zakazi" class="btn btn-primary js-book">Zakaži trening <span class="arrow">→</span></a>
+      </article>
+      <article class="card" data-reveal data-d="1">
+        <span class="tag">Paket</span>
+        <h3><span class="todo">Naziv paketa</span></h3>
+        <div class="price"><span class="todo">0.000 RSD</span></div>
+        <ul><li><span class="todo">Broj treninga</span></li><li><span class="todo">Rok važenja / uslovi</span></li></ul>
+        <a href="#zakazi" class="btn btn-ghost js-book">Zakaži trening <span class="arrow">→</span></a>
+      </article>
+      <article class="card" data-reveal data-d="2">
+        <span class="tag">Paket</span>
+        <h3><span class="todo">Naziv paketa</span></h3>
+        <div class="price"><span class="todo">0.000 RSD</span></div>
+        <ul><li><span class="todo">Broj treninga</span></li><li><span class="todo">Rok važenja / uslovi</span></li></ul>
+        <a href="#zakazi" class="btn btn-ghost js-book">Zakaži trening <span class="arrow">→</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ČESTA PITANJA ================= -->
+<section class="faq sec" id="pitanja">
+  <div class="wrap faq-grid">
+    <div class="aside" data-reveal>
+      <span class="label">Pitanja</span>
+      <h2>Česta pitanja</h2>
+      <p>Ako ne nađete odgovor, javite nam se pre prvog termina.</p>
+      <a href="#kontakt" class="link">Kontakt i lokacija</a>
+    </div>
+    <div class="acc" data-reveal data-d="1">
+      <div class="acc-item"><button class="acc-q" aria-expanded="false">Da li mi je potrebno prethodno iskustvo?<span class="pm"></span></button><div class="acc-a"><div><p>Trening se prilagođava vašem trenutnom nivou i iskustvu. Na prvom treningu instruktor vam pokazuje reformer, osnovne pokrete i pravilan način izvođenja vežbi. <span class="todo">Potvrditi sa studijom</span></p></div></div></div>
+      <div class="acc-item"><button class="acc-q" aria-expanded="false">Šta treba da ponesem na trening?<span class="pm"></span></button><div class="acc-a"><div><p><span class="todo">Dopuniti prema pravilima studija (npr. odeća, čarape, peškir, voda)</span></p></div></div></div>
+      <div class="acc-item"><button class="acc-q" aria-expanded="false">Koliko traje trening?<span class="pm"></span></button><div class="acc-a"><div><p><span class="todo">Dopuniti trajanje treninga</span></p></div></div></div>
+      <div class="acc-item"><button class="acc-q" aria-expanded="false">Kako mogu da zakažem termin?<span class="pm"></span></button><div class="acc-a"><div><p>Termine zakazujete kroz FortyFour aplikaciju, dostupnu na App Store-u i Google Play-u. U aplikaciji vidite slobodne termine, svoje rezervacije i članarinu. <span class="todo">Dopuniti: kako novi član dobija nalog u aplikaciji</span></p></div></div></div>
+      <div class="acc-item"><button class="acc-q" aria-expanded="false">Da li moram unapred da rezervišem trening?<span class="pm"></span></button><div class="acc-a"><div><p>Da. Broj mesta po terminu je ograničen, pa se termini rezervišu unapred kroz aplikaciju. <span class="todo">Dopuniti pravila otkazivanja ako postoje</span></p></div></div></div>
+      <div class="acc-item"><button class="acc-q" aria-expanded="false">Kako izgleda prvi trening?<span class="pm"></span></button><div class="acc-a"><div><p>Prvo zakažete termin. Na treningu vas instruktor upoznaje sa reformerom, pokazuje osnovne pokrete i pravilan način izvođenja vežbi, a zatim počinje trening prilagođen vašem nivou i iskustvu.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOKACIJA ================= -->
+<section class="loc sec" id="kontakt">
+  <div class="wrap">
+    <span class="label" data-reveal>Lokacija</span>
+    <h2 data-reveal data-d="1">Gde smo</h2>
+    <div class="map-box" data-reveal="fade">
+      <div class="maps">
+        <div class="map">
+          <iframe title="Mapa — FortyFour Pilates, Fruškogorska 21, Sremska Mitrovica" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=Fru%C5%A1kogorska%2021%2C%20Sremska%20Mitrovica%2C%20Srbija&z=16&output=embed"></iframe>
+          <span class="map-tag">Sremska Mitrovica</span>
+        </div>
+        <div class="map">
+          <iframe title="Mapa — FortyFour Pilates, 15. maja 122b, Ruma" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=15.%20maja%20122b%2C%20Ruma%2C%20Srbija&z=16&output=embed"></iframe>
+          <span class="map-tag">Ruma</span>
+        </div>
+      </div>
+      <div class="loc-panel on-dark">
+        <a href="#top" class="logo"><svg viewBox="96 35 319 441"><use href="#mark"/></svg><span class="wm"><b>FORTY FOUR</b><small>PILATES</small></span></a>
+        <div class="places">
+          <a class="place" href="https://www.google.com/maps/search/?api=1&query=Fru%C5%A1kogorska+21%2C+Sremska+Mitrovica" target="_blank" rel="noopener">
+            <span class="pin">01</span>
+            <span><b>Sremska Mitrovica</b>Fruškogorska 21</span>
+            <span class="arrow">↗</span>
+          </a>
+          <a class="place" href="https://www.google.com/maps/search/?api=1&query=15.+maja+122b%2C+Ruma" target="_blank" rel="noopener">
+            <span class="pin">02</span>
+            <span><b>Ruma</b>15. maja 122b</span>
+            <span class="arrow">↗</span>
+          </a>
+        </div>
+        <dl>
+          <div><dt>Telefon</dt><dd><span class="todo">Broj telefona</span></dd></div>
+          <div><dt>Radno vreme</dt><dd><span class="todo">Radno vreme (po lokaciji, ako se razlikuje)</span></dd></div>
+          <div><dt>Zakazivanje</dt><dd>FortyFour aplikacija · App Store i Google Play</dd></div>
+        </dl>
+        <a href="#zakazi" class="btn btn-primary js-book">Zakaži trening <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ZAVRŠNI POZIV ================= -->
+<section class="final sec on-dark" id="zakazi">
+  <svg class="big-mark" viewBox="96 35 319 441" aria-hidden="true"><use href="#mark"/></svg>
+  <div class="wrap">
+    <h2 data-reveal>Spremni za <span>prvi trening?</span></h2>
+    <div class="final-row">
+      <p data-reveal data-d="1">Zakažite svoj termin i upoznajte FortyFour Pilates.</p>
+      <div data-reveal data-d="2">
+        <div class="stores">
+          <a class="store" id="st-ios" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.6-1-2.6-3.9zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>
+            <span><small>Preuzmite na</small><b>App Store</b></span>
+          </a>
+          <a class="store" id="st-and" href="https://play.google.com/store/apps/details?id=eu.andrea360.fortyfour_sremskamitrovica" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.3c-.2.2-.3.6-.3 1v17.4c0 .4.1.8.3 1l9.7-9.7-9.7-9.7zm10.8 10.8 2.7 2.7-11.4 6.5c-.4.2-.8.3-1.1.2l9.8-9.4zm0-2.2L4.6 1.5c.3-.1.7 0 1.1.2l11.4 6.5-2.7 2.7zm3.6 4.1-3-3 3-3 3.3 1.9c.9.5.9 1.8 0 2.3L18 15z"/></svg>
+            <span><small>Preuzmite na</small><b>Google Play</b></span>
+          </a>
+        </div>
+        <p class="hint">Termine, rezervacije i članarinu pratite u aplikaciji. <span class="todo">Dodati App Store link</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FUTER ================= -->
+<footer class="foot on-dark">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo"><svg viewBox="96 35 319 441"><use href="#mark"/></svg><span class="wm"><b>FORTY FOUR</b><small>PILATES</small></span></a>
+        <p style="margin-top:18px;max-width:30ch;color:rgba(248,238,236,.6)">Reformer Pilates · Sremska Mitrovica i Ruma</p>
+      </div>
+      <div><h4>Lokacije</h4><p>Fruškogorska 21<br>Sremska Mitrovica</p><p style="margin-top:12px">15. maja 122b<br>Ruma</p></div>
+      <div><h4>Kontakt</h4><p><span class="todo">Telefon</span></p><p style="margin-top:8px">Instagram: <span class="todo">@nalog</span></p></div>
+      <div><h4>Radno vreme</h4><p><span class="todo">Radno vreme</span></p></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 FortyFour Pilates</span>
+      <a href="#zakazi" class="js-book">Zakaži trening →</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= MOBILNI CTA ================= -->
+<div class="mbar" id="mbar">
+  <span class="info"><b>Prvi trening?</b>Zakazivanje u aplikaciji</span>
+  <a href="#zakazi" class="btn btn-primary js-book">Zakaži trening <span class="arrow">→</span></a>
+</div>
+
+<script>
+(function(){
+  /* ---- Primarni kanal za zakazivanje: FortyFour aplikacija ---- */
+  var PLAY = 'https://play.google.com/store/apps/details?id=eu.andrea360.fortyfour_sremskamitrovica';
+  var IOS  = ''; // TODO: upisati App Store link aplikacije Forty Four
+  var ua = navigator.userAgent || '';
+  var isAndroid = /Android/i.test(ua);
+  var isIOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var target = isAndroid ? PLAY : (isIOS && IOS ? IOS : null);
+  var iosBtn = document.getElementById('st-ios');
+  if (IOS) { iosBtn.href = IOS; } else { iosBtn.addEventListener('click', function(e){ e.preventDefault(); }); }
+  if (target) {
+    document.querySelectorAll('.js-book').forEach(function(a){ a.href = target; a.target = '_blank'; a.rel = 'noopener'; });
+  }
+
+  /* ---- Navigacija ---- */
+  var nav = document.getElementById('nav');
+  var mbar = document.getElementById('mbar');
+  var hero = document.querySelector('.hero');
+  var finalSec = document.getElementById('zakazi');
+  function onScroll(){
+    var y = window.scrollY;
+    nav.classList.toggle('scrolled', y > 24);
+    var heroBottom = hero.offsetTop + hero.offsetHeight - 120;
+    var fr = finalSec.getBoundingClientRect();
+    var finalVisible = fr.top < window.innerHeight && fr.bottom > 0;
+    mbar.classList.toggle('show', y > heroBottom && !finalVisible && !document.body.classList.contains('menu-open'));
+  }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  var burger = document.getElementById('burger'), mmenu = document.getElementById('mmenu');
+  function setMenu(open){
+    document.body.classList.toggle('menu-open', open);
+    burger.setAttribute('aria-expanded', open); burger.setAttribute('aria-label', open ? 'Zatvori meni' : 'Otvori meni');
+    mmenu.setAttribute('aria-hidden', !open);
+    document.body.style.overflow = open ? 'hidden' : '';
+    onScroll();
+  }
+  burger.addEventListener('click', function(){ setMenu(!document.body.classList.contains('menu-open')); });
+  mmenu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') setMenu(false); });
+
+  /* ---- Accordion ---- */
+  document.querySelectorAll('.acc-q').forEach(function(q){
+    q.addEventListener('click', function(){
+      var item = q.parentElement, open = !item.classList.contains('open');
+      item.parentElement.querySelectorAll('.acc-item.open').forEach(function(o){ if(o!==item){ o.classList.remove('open'); o.querySelector('.acc-q').setAttribute('aria-expanded','false'); } });
+      item.classList.toggle('open', open); q.setAttribute('aria-expanded', open);
+    });
+  });
+
+  /* ---- Instruktori: prebacivanje ---- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab')), cur = 0;
+  function showT(i){
+    cur = (i + tabs.length) % tabs.length;
+    tabs.forEach(function(t,k){ var on = k===cur; t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; document.getElementById('tp'+(k+1)).hidden = !on; });
+    document.getElementById('tcur').textContent = '0'+(cur+1);
+    document.getElementById('tphoto').textContent = 'Foto: instruktor '+(cur+1)+' · portret 4:5';
+  }
+  tabs.forEach(function(t,k){
+    t.addEventListener('click', function(){ showT(k); });
+    t.addEventListener('keydown', function(e){ if(e.key==='ArrowRight'){showT(cur+1);tabs[cur].focus();} if(e.key==='ArrowLeft'){showT(cur-1);tabs[cur].focus();} });
+  });
+  document.querySelectorAll('.tstep').forEach(function(b){ b.addEventListener('click', function(){ showT(cur + (+b.dataset.step)); }); });
+
+  /* ---- Animacije pri skrolovanju ---- */
+  var els = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {threshold:.14, rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  } else { els.forEach(function(el){ el.classList.add('in'); }); }
+
+  /* ---- Timeline linija se popunjava ---- */
+  var tl = document.getElementById('tl');
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function(en){ if(en[0].isIntersecting){ var p=0; var t=setInterval(function(){ p+=4; tl.style.setProperty('--prog', Math.min(p,100)+'%'); if(p>=100) clearInterval(t); }, 18); } }, {threshold:.4}).observe(tl);
+  }
+})();
+</script>
+</body>
+</html>
